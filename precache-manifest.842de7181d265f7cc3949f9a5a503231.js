@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24b0adf3be9c00a1509aa4aa6bccfe5c",
+    "revision": "23087a2d0379ee2dd630da0fdfc99cfd",
     "url": "/horizoverlay/index.html"
   },
   {
-    "revision": "872d5bf5bd7ef8aef009",
+    "revision": "4941bc775a228431fe09",
     "url": "/horizoverlay/static/css/main.4a5cd103.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/horizoverlay/static/js/2.b7868ab6.chunk.js"
   },
   {
-    "revision": "872d5bf5bd7ef8aef009",
-    "url": "/horizoverlay/static/js/main.ed53192d.chunk.js"
+    "revision": "4941bc775a228431fe09",
+    "url": "/horizoverlay/static/js/main.4b820d90.chunk.js"
   },
   {
     "revision": "f5cff2eb4effd23c272c",
