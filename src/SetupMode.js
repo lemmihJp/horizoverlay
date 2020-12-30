@@ -37,7 +37,9 @@ function SetupModeRaw(props) {
                       : props.config.color === 'byJob'
                       ? 'byJob'
                       : ''
-                  } ${mock.jobClass} `}
+                  } ${mock.jobClass}${
+                    mock.isSelf && props.config.showHighlightSelf ? ' highlightSelf' : ''
+                  }`}
                   style={{ order: mock.rank }}
                   key={mock.rank}
                 >
@@ -46,14 +48,12 @@ function SetupModeRaw(props) {
                       <span className="rank">{`${mock.rank}. `}</span>
                     ) : null}
                     <span className="character-name">
-                      {mock.isSelf && props.config.showSelf
-                        ? props.config.characterName
-                        : mock.name}
+                      {mock.isSelf ? props.config.characterName : mock.name}
                     </span>
                   </div>
                   <div
                     className={`data-items${props.config.showHighlight ? ' highlight' : ''}${
-                      props.config.showHighlightSelf ? ' highlightSelf' : ''
+                      props.config.showGlowSelf ? ' glowSelf' : ''
                     }${mock.isHealing ? ' inverse' : ''}`}
                   >
                     {props.config.showJobIcon ? (

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { shape, bool, string, object } from 'prop-types'
+import React, { Component } from 'react';
+import { shape, bool, string, object } from 'prop-types';
 
 export const defaultConfig = {
   showSetup: false,
@@ -10,7 +10,7 @@ export const defaultConfig = {
   showHps: false,
   showHighlight: false,
   showHighlightSelf: false,
-  showSelf: true,
+  showGlowSelf: false,
   showMaxhit: false,
   showDuration: true,
   showTotalDps: true,
@@ -25,24 +25,20 @@ export const defaultConfig = {
   combinePets: false,
   configWindow: {
     width: 1300,
-    height: 239
+    height: 239,
   },
   colorHealer: 'rgba(139, 195, 74, 0.3)',
   colorTank: 'rgba(33, 150, 243, 0.3)',
-  colorDps: 'rgba(244, 67, 54, 0.3)'
-}
+  colorDps: 'rgba(244, 67, 54, 0.3)',
+};
 
 // Declaring as a function makes it hoisted and don't mess with constructor from React.Component
-export function withHelper({
-  WrappedComponent,
-  willMock = false,
-  isConfig = false
-}) {
+export function withHelper({ WrappedComponent, willMock = false, isConfig = false }) {
   return class withConfig extends Component {
     static defaultProps = {
       mockData: willMock ? mockData : null,
-      config: defaultConfig
-    }
+      config: defaultConfig,
+    };
     static propTypes = {
       config: shape({
         showSetup: bool.isRequired,
@@ -54,79 +50,73 @@ export function withHelper({
         showJobIcon: bool.isRequired,
         showRank: bool.isRequired,
         showDamagePercent: bool.isRequired,
-		    showJobless: bool.isRequired,
+        showJobless: bool.isRequired,
         zoom: string.isRequired,
-        configWindow: object.isRequired
-      })
-    }
-    state = { ...this.props }
-    resizeTimeout = undefined
+        configWindow: object.isRequired,
+      }),
+    };
+    state = { ...this.props };
+    resizeTimeout = undefined;
     componentWillMount() {
-      window.addEventListener('storage', this.updateState, false)
+      window.addEventListener('storage', this.updateState, false);
       // Check this before implementing
       // https://lodash.com/docs/4.17.4#throttle
       // if (isConfig)
       //   window.addEventListener('resize', this.handleResizeThrottler, false)
-      this.updateState()
+      this.updateState();
     }
     componentWillReceiveProps(nextProps) {
-      this.updateState()
+      this.updateState();
     }
     componentWillUnmount() {
-      window.removeEventListener('storage', this.updateState)
+      window.removeEventListener('storage', this.updateState);
       // if (isConfig)
       //   window.removeEventListener('resize', this.handleResizeThrottler)
     }
     updateState = () => {
-      const configStore = localStorage.getItem('horizoverlay')
+      const configStore = localStorage.getItem('horizoverlay');
       if (!configStore) {
-        const config = this.props.config
-        localStorage.setItem('horizoverlay', JSON.stringify(config))
-        this.setState({ config })
+        const config = this.props.config;
+        localStorage.setItem('horizoverlay', JSON.stringify(config));
+        this.setState({ config });
       } else {
-        const config = JSON.parse(configStore)
-        this.setState({ config })
+        const config = JSON.parse(configStore);
+        this.setState({ config });
       }
-    }
+    };
     handleResize = () => {
-      const config = { ...this.state.config }
+      const config = { ...this.state.config };
       let width = window.innerWidth,
-        height = window.innerHeight
+        height = window.innerHeight;
 
       // update the value in our copied state...
-      config.configWindow = { width, height }
+      config.configWindow = { width, height };
       // ...and set it to component' state
-      this.setState({ config })
+      this.setState({ config });
 
       // And then save it to localStorage!
-      localStorage.setItem('horizoverlay', JSON.stringify(config))
-    }
+      localStorage.setItem('horizoverlay', JSON.stringify(config));
+    };
     handleResizeThrottler = () => {
       if (!this.resizeTimeout) {
         this.resizeTimeout = setTimeout(() => {
-          this.resizeTimeout = null
-          this.handleResize()
-        }, 66)
+          this.resizeTimeout = null;
+          this.handleResize();
+        }, 66);
       }
-    }
+    };
     openConfig = () => {
-      this.setState({ isConfigOpen: true })
-      const windowFeatures = `menubar=no,location=no,resizable=no,scrollbars=yes,status=no,width=${
-        this.props.config.configWindow.width
-      },height=${this.props.config.configWindow.height}`
-      this.configWindow = window.open(
-        './#/config',
-        'Horizoverlay Config',
-        windowFeatures
-      )
-      this.configWindow.focus()
+      this.setState({ isConfigOpen: true });
+      const windowFeatures = `menubar=no,location=no,resizable=no,scrollbars=yes,status=no,width=${this.props.config.configWindow.width},height=${this.props.config.configWindow.height}`;
+      this.configWindow = window.open('./#/config', 'Horizoverlay Config', windowFeatures);
+      this.configWindow.focus();
       this.configWindow.onbeforeunload = () => {
-        this.setState({ isConfigOpen: false })
-        this.configWindow = null
-      }
-    }
+        this.setState({ isConfigOpen: false });
+        this.configWindow = null;
+      };
+    };
     render = () => {
-      const { Combatant, Encounter, isActive } = this.props
+      const { Combatant, Encounter, isActive } = this.props;
       return (
         <WrappedComponent
           {...this.state}
@@ -136,15 +126,15 @@ export function withHelper({
           openConfig={this.openConfig}
           handleReset={this.updateState}
         />
-      )
-    }
-  }
+      );
+    };
+  };
 }
 
 export function getRandom(min, max) {
-  const first = Math.ceil(min)
-  const last = Math.floor(max)
-  return Math.floor(Math.random() * (last - first + 1)) + first
+  const first = Math.ceil(min);
+  const last = Math.floor(max);
+  return Math.floor(Math.random() * (last - first + 1)) + first;
 }
 
 export const jobRoles = {
@@ -174,9 +164,9 @@ export const jobRoles = {
     'rook',
     'bishop',
     'chocobo',
-    'lb'
-  ]
-}
+    'lb',
+  ],
+};
 
 export const otherIcons = [
   'lb',
@@ -188,8 +178,8 @@ export const otherIcons = [
   'carbuncle',
   'garuda',
   'ifrit',
-  'titan'
-]
+  'titan',
+];
 
 export const mockData = [
   {
@@ -209,7 +199,7 @@ export const mockData = [
     crit: '30%',
     dcrit: '10%',
     deaths: '0',
-    maxhit: 'Super Yey-3921'
+    maxhit: 'Super Yey-3921',
   },
   {
     isSelf: false,
@@ -228,7 +218,7 @@ export const mockData = [
     crit: '28%',
     dcrit: '8%',
     deaths: '0',
-    maxhit: 'Meteor-4221'
+    maxhit: 'Meteor-4221',
   },
   {
     isSelf: false,
@@ -247,7 +237,7 @@ export const mockData = [
     crit: '19%',
     dcrit: '16%',
     deaths: '0',
-    maxhit: 'Thievery-2332'
+    maxhit: 'Thievery-2332',
   },
   {
     isSelf: false,
@@ -266,7 +256,7 @@ export const mockData = [
     crit: '21%',
     dcrit: '10%',
     deaths: '1',
-    maxhit: 'Alexander-8720'
+    maxhit: 'Alexander-8720',
   },
   {
     isSelf: false,
@@ -285,7 +275,7 @@ export const mockData = [
     crit: '19%',
     dcrit: '5%',
     deaths: '3',
-    maxhit: "Rei's Wind-3092"
+    maxhit: "Rei's Wind-3092",
   },
   {
     isSelf: false,
@@ -304,7 +294,7 @@ export const mockData = [
     crit: '19%',
     dcrit: '0%',
     deaths: '0',
-    maxhit: 'Power Break-1251'
+    maxhit: 'Power Break-1251',
   },
   {
     isSelf: false,
@@ -323,7 +313,7 @@ export const mockData = [
     crit: '99%',
     dcrit: '99%',
     deaths: '0',
-    maxhit: 'Frog Drop-9999'
+    maxhit: 'Frog Drop-9999',
   },
   {
     isSelf: false,
@@ -342,7 +332,7 @@ export const mockData = [
     crit: '26%',
     dcrit: '4%',
     deaths: '0',
-    maxhit: 'Carbuncle-9701'
+    maxhit: 'Carbuncle-9701',
   },
   {
     isSelf: false,
@@ -361,7 +351,7 @@ export const mockData = [
     crit: '31%',
     dcrit: '2%',
     deaths: '0',
-    maxhit: 'Geez-411'
+    maxhit: 'Geez-411',
   },
   {
     isSelf: false,
@@ -380,6 +370,6 @@ export const mockData = [
     crit: '--',
     dcrit: '--',
     deaths: '-',
-    maxhit: 'Limit Break-29891'
-  }
-]
+    maxhit: 'Limit Break-29891',
+  },
+];

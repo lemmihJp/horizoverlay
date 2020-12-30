@@ -184,7 +184,18 @@ class ConfigRaw extends Component {
               onChange={this.handleConfig}
             />
             <label htmlFor="showHighlightSelf">
-              {/* Highlight Self */}
+              {/* Self */}
+              {loc.toggleOption5}
+            </label>
+            <input
+              type="checkbox"
+              name="showGlowSelf"
+              id="showGlowSelf"
+              defaultChecked={config.showGlowSelf}
+              onChange={this.handleConfig}
+            />
+            <label htmlFor="showGlowSelf">
+              {/* Glow Self */}
               {loc.toggleOption13}
             </label>
             <input

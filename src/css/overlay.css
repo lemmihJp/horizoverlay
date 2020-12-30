@@ -15,7 +15,15 @@
   max-width: 140px;
 }
 
-.row.self .data-items.highlightSelf:before {
+.row.highlightSelf .data-items:before {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.row.highlightSelf .dps {
+  color: #000 !important;
+  text-shadow: none !important;
+}
+
+.row.self .data-items.glowSelf:before {
   outline: none;
   border: 1px solid #e9ab00e8;
   box-shadow: 0px 0px 8px #e9ab00e8;
@@ -28,11 +36,13 @@
 }
 
 .row.byJob.Mnk .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(215, 156, 0, 1.0) 0%,
-      rgba(215, 156, 0, 0.5) 51%,
-      rgba(215, 156, 0, 0.1) 51%,
-      rgba(215, 156, 0, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(215, 156, 0, 1) 0%,
+    rgba(215, 156, 0, 0.5) 51%,
+    rgba(215, 156, 0, 0.1) 51%,
+    rgba(215, 156, 0, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -41,11 +51,13 @@
 }
 
 .row.byJob.Drg .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(66, 101, 205, 1.0) 0%,
-      rgba(66, 101, 205, 0.5) 51%,
-      rgba(66, 101, 205, 0.1) 51%,
-      rgba(66, 101, 205, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(66, 101, 205, 1) 0%,
+    rgba(66, 101, 205, 0.5) 51%,
+    rgba(66, 101, 205, 0.1) 51%,
+    rgba(66, 101, 205, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -54,11 +66,13 @@
 }
 
 .row.self.byJob.Nin .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(175, 25, 99, 1.0) 0%,
-      rgba(175, 25, 99, 0.5) 51%,
-      rgba(175, 25, 99, 0.1) 51%,
-      rgba(175, 25, 99, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(175, 25, 99, 1) 0%,
+    rgba(175, 25, 99, 0.5) 51%,
+    rgba(175, 25, 99, 0.1) 51%,
+    rgba(175, 25, 99, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -67,11 +81,13 @@
 }
 
 .row.self.byJob.Sam .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(228, 110, 4, 1.0) 0%,
-      rgba(228, 110, 4, 0.5) 51%,
-      rgba(228, 110, 4, 0.1) 51%,
-      rgba(228, 110, 4, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(228, 110, 4, 1) 0%,
+    rgba(228, 110, 4, 0.5) 51%,
+    rgba(228, 110, 4, 0.1) 51%,
+    rgba(228, 110, 4, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -80,11 +96,13 @@
 }
 
 .row.byJob.Brd .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(145, 186, 94, 1.0) 0%,
-      rgba(145, 186, 94, 0.5) 51%,
-      rgba(145, 186, 94, 0.1) 51%,
-      rgba(145, 186, 94, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(145, 186, 94, 1) 0%,
+    rgba(145, 186, 94, 0.5) 51%,
+    rgba(145, 186, 94, 0.1) 51%,
+    rgba(145, 186, 94, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -93,11 +111,13 @@
 }
 
 .row.byJob.Mch .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(109, 252, 214, 1.0) 0%,
-      rgba(109, 252, 214, 0.5) 51%,
-      rgba(109, 252, 214, 0.1) 51%,
-      rgba(109, 252, 214, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(109, 252, 214, 1) 0%,
+    rgba(109, 252, 214, 0.5) 51%,
+    rgba(109, 252, 214, 0.1) 51%,
+    rgba(109, 252, 214, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -106,11 +126,13 @@
 }
 
 .row.byJob.Dnc .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(226, 176, 175, 1.0) 0%,
-      rgba(226, 176, 175, 0.5) 51%,
-      rgba(226, 176, 175, 0.1) 51%,
-      rgba(226, 176, 175, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(226, 176, 175, 1) 0%,
+    rgba(226, 176, 175, 0.5) 51%,
+    rgba(226, 176, 175, 0.1) 51%,
+    rgba(226, 176, 175, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -119,11 +141,13 @@
 }
 
 .row.byJob.Smn .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(45, 155, 120, 1.0) 0%,
-      rgba(45, 155, 120, 0.5) 51%,
-      rgba(45, 155, 120, 0.1) 51%,
-      rgba(45, 155, 120, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(45, 155, 120, 1) 0%,
+    rgba(45, 155, 120, 0.5) 51%,
+    rgba(45, 155, 120, 0.1) 51%,
+    rgba(45, 155, 120, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -132,11 +156,13 @@
 }
 
 .row.byJob.Blm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(165, 122, 214, 1.0) 0%,
-      rgba(165, 122, 214, 0.5) 51%,
-      rgba(165, 122, 214, 0.1) 51%,
-      rgba(165, 122, 214, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(165, 122, 214, 1) 0%,
+    rgba(165, 122, 214, 0.5) 51%,
+    rgba(165, 122, 214, 0.1) 51%,
+    rgba(165, 122, 214, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -145,11 +171,13 @@
 }
 
 .row.byJob.Rdm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(233, 123, 124, 1.0) 0%,
-      rgba(233, 123, 124, 0.5) 51%,
-      rgba(233, 123, 124, 0.1) 51%,
-      rgba(233, 123, 124, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(233, 123, 124, 1) 0%,
+    rgba(233, 123, 124, 0.5) 51%,
+    rgba(233, 123, 124, 0.1) 51%,
+    rgba(233, 123, 124, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -158,11 +186,13 @@
 }
 
 .row.byJob.Blu .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(41, 45, 94, 1.0) 0%,
-      rgba(41, 45, 94, 0.5) 51%,
-      rgba(41, 45, 94, 0.1) 51%,
-      rgba(41, 45, 94, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(41, 45, 94, 1) 0%,
+    rgba(41, 45, 94, 0.5) 51%,
+    rgba(41, 45, 94, 0.1) 51%,
+    rgba(41, 45, 94, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -171,11 +201,13 @@
 }
 
 .row.byJob.Pld .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(168, 211, 230, 1.0) 0%,
-      rgba(168, 211, 230, 0.5) 51%,
-      rgba(168, 211, 230, 0.1) 51%,
-      rgba(168, 211, 230, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(168, 211, 230, 1) 0%,
+    rgba(168, 211, 230, 0.5) 51%,
+    rgba(168, 211, 230, 0.1) 51%,
+    rgba(168, 211, 230, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -184,11 +216,13 @@
 }
 
 .row.byJob.War .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(207, 38, 33, 1.0) 0%,
-      rgba(207, 38, 33, 0.5) 51%,
-      rgba(207, 38, 33, 0.1) 51%,
-      rgba(207, 38, 33, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(207, 38, 33, 1) 0%,
+    rgba(207, 38, 33, 0.5) 51%,
+    rgba(207, 38, 33, 0.1) 51%,
+    rgba(207, 38, 33, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -197,11 +231,13 @@
 }
 
 .row.byJob.Drk .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(209, 38, 204, 1.0) 0%,
-      rgba(209, 38, 204, 0.5) 51%,
-      rgba(209, 38, 204, 0.1) 51%,
-      rgba(209, 38, 204, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(209, 38, 204, 1) 0%,
+    rgba(209, 38, 204, 0.5) 51%,
+    rgba(209, 38, 204, 0.1) 51%,
+    rgba(209, 38, 204, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -210,11 +246,13 @@
 }
 
 .row.byJob.Gnb .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(121, 110, 48, 1.0) 0%,
-      rgba(121, 110, 48, 0.5) 51%,
-      rgba(121, 110, 48, 0.1) 51%,
-      rgba(121, 110, 48, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(121, 110, 48, 1) 0%,
+    rgba(121, 110, 48, 0.5) 51%,
+    rgba(121, 110, 48, 0.1) 51%,
+    rgba(121, 110, 48, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -223,11 +261,13 @@
 }
 
 .row.byJob.Whm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(255, 240, 219, 1.0) 0%,
-      rgba(255, 240, 219, 0.5) 51%,
-      rgba(255, 240, 219, 0.1) 51%,
-      rgba(255, 240, 219, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 240, 219, 1) 0%,
+    rgba(255, 240, 219, 0.5) 51%,
+    rgba(255, 240, 219, 0.1) 51%,
+    rgba(255, 240, 219, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -236,11 +276,13 @@
 }
 
 .row.byJob.Sch .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(134, 87, 255, 1.0) 0%,
-      rgba(134, 87, 255, 0.5) 51%,
-      rgba(134, 87, 255, 0.1) 51%,
-      rgba(134, 87, 255, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(134, 87, 255, 1) 0%,
+    rgba(134, 87, 255, 0.5) 51%,
+    rgba(134, 87, 255, 0.1) 51%,
+    rgba(134, 87, 255, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -249,25 +291,28 @@
 }
 
 .row.byJob.Ast .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(255, 231, 73, 1.0) 0%,
-      rgba(255, 231, 73, 0.5) 51%,
-      rgba(255, 231, 73, 0.1) 51%,
-      rgba(255, 231, 73, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 231, 73, 1) 0%,
+    rgba(255, 231, 73, 0.5) 51%,
+    rgba(255, 231, 73, 0.1) 51%,
+    rgba(255, 231, 73, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
-
 
 .row.byJob.Mnk .data-items:before {
   background: rgba(215, 156, 0, 0.5);
 }
 
 .row.byJob.Mnk .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(215, 156, 0, 1.0) 0%,
-      rgba(215, 156, 0, 0.5) 51%,
-      rgba(215, 156, 0, 0.1) 51%,
-      rgba(215, 156, 0, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(215, 156, 0, 1) 0%,
+    rgba(215, 156, 0, 0.5) 51%,
+    rgba(215, 156, 0, 0.1) 51%,
+    rgba(215, 156, 0, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -276,11 +321,13 @@
 }
 
 .row.byJob.Drg .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(66, 101, 205, 1.0) 0%,
-      rgba(66, 101, 205, 0.5) 51%,
-      rgba(66, 101, 205, 0.1) 51%,
-      rgba(66, 101, 205, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(66, 101, 205, 1) 0%,
+    rgba(66, 101, 205, 0.5) 51%,
+    rgba(66, 101, 205, 0.1) 51%,
+    rgba(66, 101, 205, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -289,11 +336,13 @@
 }
 
 .row.byJob.Nin .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(175, 25, 99, 1.0) 0%,
-      rgba(175, 25, 99, 0.5) 51%,
-      rgba(175, 25, 99, 0.1) 51%,
-      rgba(175, 25, 99, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(175, 25, 99, 1) 0%,
+    rgba(175, 25, 99, 0.5) 51%,
+    rgba(175, 25, 99, 0.1) 51%,
+    rgba(175, 25, 99, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -302,11 +351,13 @@
 }
 
 .row.byJob.Sam .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(228, 110, 4, 1.0) 0%,
-      rgba(228, 110, 4, 0.5) 51%,
-      rgba(228, 110, 4, 0.1) 51%,
-      rgba(228, 110, 4, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(228, 110, 4, 1) 0%,
+    rgba(228, 110, 4, 0.5) 51%,
+    rgba(228, 110, 4, 0.1) 51%,
+    rgba(228, 110, 4, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -315,11 +366,13 @@
 }
 
 .row.byJob.Brd .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(145, 186, 94, 1.0) 0%,
-      rgba(145, 186, 94, 0.5) 51%,
-      rgba(145, 186, 94, 0.1) 51%,
-      rgba(145, 186, 94, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(145, 186, 94, 1) 0%,
+    rgba(145, 186, 94, 0.5) 51%,
+    rgba(145, 186, 94, 0.1) 51%,
+    rgba(145, 186, 94, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -328,11 +381,13 @@
 }
 
 .row.byJob.Mch .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(109, 252, 214, 1.0) 0%,
-      rgba(109, 252, 214, 0.5) 51%,
-      rgba(109, 252, 214, 0.1) 51%,
-      rgba(109, 252, 214, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(109, 252, 214, 1) 0%,
+    rgba(109, 252, 214, 0.5) 51%,
+    rgba(109, 252, 214, 0.1) 51%,
+    rgba(109, 252, 214, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -341,11 +396,13 @@
 }
 
 .row.byJob.Dnc .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(226, 176, 175, 1.0) 0%,
-      rgba(226, 176, 175, 0.5) 51%,
-      rgba(226, 176, 175, 0.1) 51%,
-      rgba(226, 176, 175, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(226, 176, 175, 1) 0%,
+    rgba(226, 176, 175, 0.5) 51%,
+    rgba(226, 176, 175, 0.1) 51%,
+    rgba(226, 176, 175, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -354,11 +411,13 @@
 }
 
 .row.byJob.Smn .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(45, 155, 120, 1.0) 0%,
-      rgba(45, 155, 120, 0.5) 51%,
-      rgba(45, 155, 120, 0.1) 51%,
-      rgba(45, 155, 120, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(45, 155, 120, 1) 0%,
+    rgba(45, 155, 120, 0.5) 51%,
+    rgba(45, 155, 120, 0.1) 51%,
+    rgba(45, 155, 120, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -367,11 +426,13 @@
 }
 
 .row.byJob.Blm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(165, 122, 214, 1.0) 0%,
-      rgba(165, 122, 214, 0.5) 51%,
-      rgba(165, 122, 214, 0.1) 51%,
-      rgba(165, 122, 214, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(165, 122, 214, 1) 0%,
+    rgba(165, 122, 214, 0.5) 51%,
+    rgba(165, 122, 214, 0.1) 51%,
+    rgba(165, 122, 214, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -380,11 +441,13 @@
 }
 
 .row.byJob.Rdm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(233, 123, 124, 1.0) 0%,
-      rgba(233, 123, 124, 0.5) 51%,
-      rgba(233, 123, 124, 0.1) 51%,
-      rgba(233, 123, 124, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(233, 123, 124, 1) 0%,
+    rgba(233, 123, 124, 0.5) 51%,
+    rgba(233, 123, 124, 0.1) 51%,
+    rgba(233, 123, 124, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -393,11 +456,13 @@
 }
 
 .row.byJob.Blu .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(41, 45, 94, 1.0) 0%,
-      rgba(41, 45, 94, 0.5) 51%,
-      rgba(41, 45, 94, 0.1) 51%,
-      rgba(41, 45, 94, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(41, 45, 94, 1) 0%,
+    rgba(41, 45, 94, 0.5) 51%,
+    rgba(41, 45, 94, 0.1) 51%,
+    rgba(41, 45, 94, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -406,11 +471,13 @@
 }
 
 .row.byJob.Pld .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(168, 211, 230, 1.0) 0%,
-      rgba(168, 211, 230, 0.5) 51%,
-      rgba(168, 211, 230, 0.1) 51%,
-      rgba(168, 211, 230, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(168, 211, 230, 1) 0%,
+    rgba(168, 211, 230, 0.5) 51%,
+    rgba(168, 211, 230, 0.1) 51%,
+    rgba(168, 211, 230, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -419,11 +486,13 @@
 }
 
 .row.byJob.War .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(207, 38, 33, 1.0) 0%,
-      rgba(207, 38, 33, 0.5) 51%,
-      rgba(207, 38, 33, 0.1) 51%,
-      rgba(207, 38, 33, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(207, 38, 33, 1) 0%,
+    rgba(207, 38, 33, 0.5) 51%,
+    rgba(207, 38, 33, 0.1) 51%,
+    rgba(207, 38, 33, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -432,11 +501,13 @@
 }
 
 .row.byJob.Drk .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(209, 38, 204, 1.0) 0%,
-      rgba(209, 38, 204, 0.5) 51%,
-      rgba(209, 38, 204, 0.1) 51%,
-      rgba(209, 38, 204, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(209, 38, 204, 1) 0%,
+    rgba(209, 38, 204, 0.5) 51%,
+    rgba(209, 38, 204, 0.1) 51%,
+    rgba(209, 38, 204, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -445,11 +516,13 @@
 }
 
 .row.byJob.Gnb .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(121, 110, 48, 1.0) 0%,
-      rgba(121, 110, 48, 0.5) 51%,
-      rgba(121, 110, 48, 0.1) 51%,
-      rgba(121, 110, 48, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(121, 110, 48, 1) 0%,
+    rgba(121, 110, 48, 0.5) 51%,
+    rgba(121, 110, 48, 0.1) 51%,
+    rgba(121, 110, 48, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -458,11 +531,13 @@
 }
 
 .row.byJob.Whm .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(255, 240, 219, 1.0) 0%,
-      rgba(255, 240, 219, 0.5) 51%,
-      rgba(255, 240, 219, 0.1) 51%,
-      rgba(255, 240, 219, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 240, 219, 1) 0%,
+    rgba(255, 240, 219, 0.5) 51%,
+    rgba(255, 240, 219, 0.1) 51%,
+    rgba(255, 240, 219, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -471,11 +546,13 @@
 }
 
 .row.byJob.Sch .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(134, 87, 255, 1.0) 0%,
-      rgba(134, 87, 255, 0.5) 51%,
-      rgba(134, 87, 255, 0.1) 51%,
-      rgba(134, 87, 255, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(134, 87, 255, 1) 0%,
+    rgba(134, 87, 255, 0.5) 51%,
+    rgba(134, 87, 255, 0.1) 51%,
+    rgba(134, 87, 255, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -484,11 +561,13 @@
 }
 
 .row.byJob.Ast .data-items.highlight:before {
-  background-image: linear-gradient(to left,
-      rgba(255, 231, 73, 1.0) 0%,
-      rgba(255, 231, 73, 0.5) 51%,
-      rgba(255, 231, 73, 0.1) 51%,
-      rgba(255, 231, 73, 0.1) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 231, 73, 1) 0%,
+    rgba(255, 231, 73, 0.5) 51%,
+    rgba(255, 231, 73, 0.1) 51%,
+    rgba(255, 231, 73, 0.1) 100%
+  );
   background-repeat: no-repeat;
 }
 
@@ -623,22 +702,22 @@
   right: 10px;
 }
 
-.row .damage-percent>* {
+.row .damage-percent > * {
   display: table-cell;
   width: 10%;
   text-align: center;
 }
 
-.damage-dh{ 
+.damage-dh {
   column-span: 3;
 }
-.damage-crit{ 
+.damage-crit {
   column-span: 3;
 }
-.damage-dcrit{ 
+.damage-dcrit {
   column-span: 3;
 }
-.damage-deaths{ 
+.damage-deaths {
   column-span: 1;
 }
 
@@ -686,12 +765,12 @@
   height: 96%;
 }
 
-.row>div {
+.row > div {
   margin: 0px auto;
   padding: 0 0 1px;
 }
 
-.row div.dps>div {
+.row div.dps > div {
   /* transform: skew(30deg); */
 }
 
