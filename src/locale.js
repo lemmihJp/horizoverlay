@@ -45,6 +45,7 @@ const locale = {
         { language: '简体中文', value: 'zhCN' },
         { language: '正體中文', value: 'zhHK' },
         { language: 'French', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
       ],
       help:
         'Everything saves automatically.<br /><strong>Right click</strong> to open this window',
@@ -102,6 +103,7 @@ const locale = {
         { language: '简体中文', value: 'zhCN' },
         { language: '正體中文', value: 'zhHK' },
         { language: 'Francês', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
       ],
       help:
         'Tudo salva automaticamente.<br /><strong>Botão direito</strong> abre essa janela.',
@@ -158,6 +160,7 @@ const locale = {
         { language: '简体中文', value: 'zhCN' },
         { language: '正體中文', value: 'zhHK' },
         { language: 'Français', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
       ],
       help:
         '所有内容都将自动保存。<br /><strong>右击模板界面</strong>打开本窗口。',
@@ -214,6 +217,7 @@ const locale = {
         { language: '簡體中文', value: 'zhCN' },
         { language: '正體中文', value: 'zhHK' },
         { language: 'Français', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
       ],
       help:
         '所有內容都將自動保存。<br /><strong>右擊範本介面</strong>打開本視窗。',
@@ -268,6 +272,7 @@ const locale = {
         { language: 'Chinois', value: 'zhCN' },
         { language: 'Hong Kong', value: 'zhHK' },
         { language: 'Français', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
       ],
       help:
         'Tout est sauvegardé automatiquement.<br /><strong>Clic droit</strong> pour ouvrir cette fenêtre',
@@ -277,6 +282,64 @@ const locale = {
         "<strong>Clic droit n'importe où dans cette fenêtre pour ouvrir les paramètres !</strong>",
       instructions:
         "Il ne s'agit PAS de vraies données, mais d'une simulation qui vous permet de placer et de configurer l'overlay comme vous le souhaitez. Allez frapper un mannequin ou engagez un combat réel pour obtenir de vraies données ici. <br />Veuillez également redimensionner cette fenêtre pour qu 'elle corresponde à la largeur de la fenêtre des paramètres.",
+    },
+  },
+  jaJP: {
+    initial: {
+      help:
+        'ここで右クリックすると設定が表示されます。ACTの「クリックスルー」が無効になっていることを確認してください。',
+    },
+    config: {
+      setupTitle: 'Setup Mode',
+      nameTitle: 'キャラクター名',
+      nameHelp: '自分の表示名:',
+      themeTitle: 'カラーテーマ',
+      themeOption1: 'ロールの色',
+      themeOption2: '白黒',
+      themeOption3: 'ジョブの色',
+      toggleTitle: '表示項目',
+      toggleOption1: '順位',
+      toggleOption2: 'ジョブアイコン',
+      toggleOption3: 'HPS',
+      toggleOption4: 'ハイライト',
+      toggleOption5: '自分',
+      toggleOption6: '戦闘時間',
+      toggleOption7: 'Total DPS',
+      toggleOption8: 'Damage %',
+      toggleOption9: 'Discord',
+      toggleOption10: 'Language',
+      toggleOption11: 'Max Hit',
+      toggleOption12: 'Show "jobless" Combatants',
+      toggleOption13: 'Highlight Self',
+      toggleOption14: 'ペットと合算する',
+      maxCombatantsTitle: '最大表示数',
+      zoomTitle: 'Zoom Scale',
+      zoomOption1: '80%',
+      zoomOption2: '90%',
+      zoomOption3: '100%',
+      zoomOption4: '110%',
+      zoomOption5: '150%',
+      zoomOption6: '200%',
+      resetTitle: 'Reset',
+      discordTitle: 'Discord Webhook URL',
+      discordHelp: 'Get this from your Discord channel',
+      localeTitle: 'Language',
+      localeOption: [
+        { language: 'English', value: 'enUS' },
+        { language: 'Português', value: 'ptBR' },
+        { language: '简体中文', value: 'zhCN' },
+        { language: '正體中文', value: 'zhHK' },
+        { language: 'Français', value: 'frFR' },
+        { language: '日本語', value: 'jaJP' },
+      ],
+      help:
+        'すべて自動で保存されます。<br /><strong>右クリック</strong>で設定画面を表示します。',
+    },
+    setupMode: {
+      instructionsTitle:
+        '<strong>Right click anywhere this window to open settings!</strong>',
+      instructions:
+        'This is NOT real data, this is just a mock so you can place and setup this overlay the way you want. Go hit a dummy or engage in real combat to get real data here. <br />Also, please resize this window to something like the width of the settings window.',
     },
   },
 };
