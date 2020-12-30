@@ -47,7 +47,7 @@ class ConfigRaw extends Component {
       <div
         className="config"
         style={{ zoom: config.zoom }}
-        {...(loc.locale === 'jaJP' ? { lang: 'ja' } : {})}
+        {...(config.locale === 'jaJP' ? { lang: 'ja' } : {})}
       >
         <form onSubmit={(e) => this.resetConfig(e)}>
           <label htmlFor="showSetup" className={`setup-btn${config.showSetup ? '' : ' disabled'}`}>
