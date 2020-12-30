@@ -1,48 +1,48 @@
-import React, { Component } from 'react'
-import { withHelper } from './helpers'
-import locale from './locale'
+import React, { Component } from 'react';
+import { withHelper } from './helpers';
+import locale from './locale';
 
-import './css/config.css'
+import './css/config.css';
 
 class ConfigRaw extends Component {
-  state = { ...this.props }
+  state = { ...this.props };
   handleConfig = (e) => {
-    const target = e.target
-    if (target.type === 'text') e.preventDefault()
-    const config = { ...this.state.config }
+    const target = e.target;
+    if (target.type === 'text') e.preventDefault();
+    const config = { ...this.state.config };
     let key = target.name,
-      value = target.value
+      value = target.value;
 
     // Why aren't HTML elements more consistent? 😦
     if (target.type === 'checkbox') {
-      value = target.checked
+      value = target.checked;
     }
 
     // update the value in our copied state...
-    config[key] = value
+    config[key] = value;
     // ...and set it to component' state
-    this.setState({ config })
+    this.setState({ config });
 
     // And then save it to localStorage!
-    localStorage.setItem('horizoverlay', JSON.stringify(config))
-  }
+    localStorage.setItem('horizoverlay', JSON.stringify(config));
+  };
   resetConfig = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Clear any setup
-    window.localStorage.clear()
+    window.localStorage.clear();
 
     // send to the wrapper component
-    this.props.handleReset(e)
+    this.props.handleReset(e);
 
     // well that's horrible
-    window.location.reload()
-  }
+    window.location.reload();
+  };
   // *** IMPORTANT ***
   // Gotta bind 'onChange' for checkboxes since false values don't bubble to 'onChange'!
   render() {
-    let { config } = this.state
-    const loc = locale[config.locale].config
+    let { config } = this.state;
+    const loc = locale[config.locale].config;
     return (
       <div className="config" style={{ zoom: config.zoom }}>
         <form onSubmit={(e) => this.resetConfig(e)}>
@@ -265,11 +265,11 @@ class ConfigRaw extends Component {
               {loc.toggleOption10}
             </label>
             <input
-                type="checkbox"
-                name="combinePets"
-                id="combinePets"
-                defaultChecked={config.combinePets}
-                onChange={this.handleConfig}
+              type="checkbox"
+              name="combinePets"
+              id="combinePets"
+              defaultChecked={config.combinePets}
+              onChange={this.handleConfig}
             />
             <label htmlFor="combinePets">
               {/* Combine Pets */}
@@ -441,26 +441,9 @@ class ConfigRaw extends Component {
             value={config.locale}
             className={config.showLocale ? '' : 'hide'}
           >
-            <option value={loc.localeOption1Value}>
-              {/* English */}
-              {loc.localeOption1}
-            </option>
-            <option value={loc.localeOption2Value}>
-              {/* Português */}
-              {loc.localeOption2}
-            </option>
-            <option value={loc.localeOption3Value}>
-              {/* Simplified Chinese */}
-              {loc.localeOption3}
-            </option>
-            <option value={loc.localeOption4Value}>
-              {/* Traditional Chinese */}
-              {loc.localeOption4}
-            </option>
-            <option value={loc.localeOption5Value}>
-              {/* French */}
-              {loc.localeOption5}
-            </option>
+            {loc.localeOption.map((locale) => (
+              <option value={locale.value}>{locale.language}</option>
+            ))}
           </select>
           <span
             className="help"
@@ -473,9 +456,9 @@ class ConfigRaw extends Component {
           </span>
         </form>
       </div>
-    )
+    );
   }
 }
 
-const Config = withHelper({ WrappedComponent: ConfigRaw, isConfig: true })
-export default Config
+const Config = withHelper({ WrappedComponent: ConfigRaw, isConfig: true });
+export default Config;
