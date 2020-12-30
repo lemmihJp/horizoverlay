@@ -44,12 +44,13 @@ class ConfigRaw extends Component {
     let { config } = this.state;
     const loc = locale[config.locale].config;
     return (
-      <div className="config" style={{ zoom: config.zoom }}>
+      <div
+        className="config"
+        style={{ zoom: config.zoom }}
+        {...(props.config.locale === 'jaJP' ? { lang: 'ja' } : {})}
+      >
         <form onSubmit={(e) => this.resetConfig(e)}>
-          <label
-            htmlFor="showSetup"
-            className={`setup-btn${config.showSetup ? '' : ' disabled'}`}
-          >
+          <label htmlFor="showSetup" className={`setup-btn${config.showSetup ? '' : ' disabled'}`}>
             <span>
               <input
                 type="checkbox"
@@ -295,10 +296,7 @@ class ConfigRaw extends Component {
               {loc.zoomTitle}
             </legend>
 
-            <label
-              htmlFor="zoom80"
-              className={`${config.zoom === '0.8' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom80" className={`${config.zoom === '0.8' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
@@ -312,10 +310,7 @@ class ConfigRaw extends Component {
                 {loc.zoomOption1}
               </span>
             </label>
-            <label
-              htmlFor="zoom90"
-              className={`${config.zoom === '0.9' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom90" className={`${config.zoom === '0.9' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
@@ -329,10 +324,7 @@ class ConfigRaw extends Component {
                 {loc.zoomOption2}
               </span>
             </label>
-            <label
-              htmlFor="zoom100"
-              className={`${config.zoom === '1' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom100" className={`${config.zoom === '1' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
@@ -348,10 +340,7 @@ class ConfigRaw extends Component {
             </label>
 
             <br />
-            <label
-              htmlFor="zoom110"
-              className={`${config.zoom === '1.1' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom110" className={`${config.zoom === '1.1' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
@@ -365,10 +354,7 @@ class ConfigRaw extends Component {
                 {loc.zoomOption4}
               </span>
             </label>
-            <label
-              htmlFor="zoom150"
-              className={`${config.zoom === '1.5' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom150" className={`${config.zoom === '1.5' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
@@ -382,10 +368,7 @@ class ConfigRaw extends Component {
                 {loc.zoomOption5}
               </span>
             </label>
-            <label
-              htmlFor="zoom200"
-              className={`${config.zoom === '2' ? '' : ' disabled'}`}
-            >
+            <label htmlFor="zoom200" className={`${config.zoom === '2' ? '' : ' disabled'}`}>
               <span>
                 <input
                   type="radio"
