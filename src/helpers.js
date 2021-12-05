@@ -139,7 +139,7 @@ export function getRandom(min, max) {
 
 export const jobRoles = {
   tank: ['drk', 'gla', 'mrd', 'pld', 'war', 'titan', 'gnb'],
-  healer: ['ast', 'cnj', 'sch', 'whm', 'eos', 'selene'],
+  healer: ['ast', 'cnj', 'sch', 'whm', 'eos', 'selene', 'sge'],
   dps: [
     'acn',
     'arc',
@@ -158,6 +158,7 @@ export const jobRoles = {
     'smn',
     'thm',
     'dnc',
+    'rpr',
     'carbuncle',
     'garuda',
     'ifrit',
