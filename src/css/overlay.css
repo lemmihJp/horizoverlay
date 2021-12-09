@@ -571,6 +571,36 @@
   background-repeat: no-repeat;
 }
 
+.row.byJob.Rpr .data-items:before {
+  background: rgba(150, 90, 144, 0.5);
+}
+
+.row.byJob.Rpr .data-items.highlight:before {
+  background-image: linear-gradient(
+    to left,
+    rgba(150, 90, 144, 1) 0%,
+    rgba(150, 90, 144, 0.5) 51%,
+    rgba(150, 90, 144, 0.1) 51%,
+    rgba(150, 90, 144, 0.1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.row.byJob.Sge .data-items:before {
+  background: rgba(144, 176, 255, 0.5);
+}
+
+.row.byJob.Sge .data-items.highlight:before {
+  background-image: linear-gradient(
+    to left,
+    rgba(144, 176, 255, 1) 0%,
+    rgba(144, 176, 255, 0.5) 51%,
+    rgba(144, 176, 255, 0.1) 51%,
+    rgba(144, 176, 255, 0.1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
 .row.self.job-dps .data-items.highlight:before {
   background-image: linear-gradient(
     to left,
