@@ -120,13 +120,6 @@ class Encounter extends Component {
               Send to Discord
             </button>
           </div>
-          <div
-            className={`vee-defaults-for-obs`}
-          >
-            <button type="button" onClick={this.resetConfig}>
-             ☆
-            </button>
-          </div>
         </div>
       </div>
     )
