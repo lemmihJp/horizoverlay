@@ -3,7 +3,7 @@ import { shape, bool, string, object } from 'prop-types';
 
 export const defaultConfig = {
   showSetup: false,
-  color: 'byRole',
+  color: 'byJob',
   characterName: 'YOU',
   showRank: true,
   showJobIcon: true,
@@ -18,7 +18,7 @@ export const defaultConfig = {
   showDiscord: false,
   showLocale: false,
   showJobless: false,
-  zoom: '1',
+  zoom: '1.0',
   discord: '',
   maxCombatants: 8,
   locale: 'enUS',
@@ -139,7 +139,7 @@ export function getRandom(min, max) {
 
 export const jobRoles = {
   tank: ['drk', 'gla', 'mrd', 'pld', 'war', 'titan', 'gnb'],
-  healer: ['ast', 'cnj', 'sch', 'whm', 'eos', 'selene', 'sge'],
+  healer: ['ast', 'cnj', 'sch', 'whm', 'sge', 'eos', 'selene'],
   dps: [
     'acn',
     'arc',
@@ -150,10 +150,12 @@ export const jobRoles = {
     'mch',
     'mnk',
     'nin',
+    'rpr',
     'pgl',
     'pug',
     'rdm',
     'rog',
+    'rpr',
     'sam',
     'smn',
     'thm',

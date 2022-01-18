@@ -46,6 +46,7 @@ export default class CombatantHorizontal extends Component {
           }
         }
       }
+    // Color theme byJob
     } else if (config.color === 'byJob') {
       for (const role in jobRoles) {
         if (jobRoles[role].indexOf(data.Job.toLowerCase()) >= 0) jobStyleClass = ` byJob`;
@@ -76,7 +77,12 @@ export default class CombatantHorizontal extends Component {
       } else {
         jobIcon += data.Job.toLowerCase();
       }
-      jobIcon = images(`${jobIcon}.png`);
+      try {
+        jobIcon = images(`${jobIcon}.png`)
+      } catch (e) {
+        console.error(e)
+        jobIcon = images('./empty.png')
+      }
     }
 
     // Character name (self, instead of 'YOU')
@@ -94,8 +100,12 @@ export default class CombatantHorizontal extends Component {
         style={{ order }}
       >
         <div className="name">
-          {config.showRank ? <span className="rank">{`${this.props.rank}. `}</span> : ''}
-          <span className="character-name">{characterName}</span>
+          {config.showRank ? (
+            <span className="rank">{`${this.props.rank}. `}</span>
+          ) : (
+            ''
+          )}
+          <span className={`character-name ${ !isSelf && config.enableStreamerMode ? 'streamer-mode' : '' }`}>{characterName}</span>
         </div>
         <div
           className={`data-items${config.showHighlight ? ' highlight' : ''}${

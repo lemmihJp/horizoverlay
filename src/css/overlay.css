@@ -361,6 +361,31 @@
   background-repeat: no-repeat;
 }
 
+.row.self.byJob.Rpr .data-items:before {
+  background: rgba(88, 12, 107, 0.5);
+}
+
+.row.self.byJob.Rpr .data-items.highlight:before {
+  background-image: linear-gradient(to left,
+      rgba(88, 12, 107, 1.0) 0%,
+      rgba(88, 12, 107, 0.5) 51%,
+      rgba(88, 12, 107, 0.1) 51%,
+      rgba(88, 12, 107, 0.1) 100%);
+  background-repeat: no-repeat;
+}
+
+.row.byJob.Rpr .data-items:before {
+  background: rgba(88, 12, 107, 0.5);
+}
+
+.row.byJob.Rpr .data-items.highlight:before {
+  background-image: linear-gradient(to left,
+      rgba(88, 12, 107, 1.0) 0%,
+      rgba(88, 12, 107, 0.5) 51%,
+      rgba(88, 12, 107, 0.1) 51%,
+      rgba(88, 12, 107, 0.1) 100%);
+  background-repeat: no-repeat;
+}
 .row.byJob.Brd .data-items:before {
   background: rgba(145, 186, 94, 0.5);
 }
@@ -601,6 +626,32 @@
   background-repeat: no-repeat;
 }
 
+.row.self.byJob.Sge .data-items:before {
+  background: rgba(117, 241, 101, 0.5);
+}
+
+.row.self.byJob.Sge .data-items.highlight:before {
+  background-image: linear-gradient(to left,
+      rgba(117, 241, 101, 1.0) 0%,
+      rgba(117, 241, 101, 0.5) 51%,
+      rgba(117, 241, 101, 0.1) 51%,
+      rgba(117, 241, 101, 0.1) 100%);
+  background-repeat: no-repeat;
+}
+
+.row.byJob.Sge .data-items:before {
+  background: rgba(117, 241, 101, 0.5);
+}
+
+.row.byJob.Sge .data-items.highlight:before {
+  background-image: linear-gradient(to left,
+      rgba(117, 241, 101, 1.0) 0%,
+      rgba(117, 241, 101, 0.5) 51%,
+      rgba(117, 241, 101, 0.1) 51%,
+      rgba(117, 241, 101, 0.1) 100%);
+  background-repeat: no-repeat;
+}
+
 .row.self.job-dps .data-items.highlight:before {
   background-image: linear-gradient(
     to left,
@@ -800,10 +851,6 @@
   padding: 0 0 1px;
 }
 
-.row div.dps > div {
-  /* transform: skew(30deg); */
-}
-
 .job {
   width: 20px;
   position: absolute;
@@ -838,4 +885,9 @@
   margin-top: -0.3em;
   margin-left: -0.8em;
   text-align: center;
+}
+/*  blur effect */
+.streamer-mode {
+  color: black;
+  filter: blur(0.4rem);
 }
