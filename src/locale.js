@@ -308,6 +308,7 @@ const locale = {
       toggleOption12: 'Show "jobless" Combatants',
       toggleOption13: 'Glow Self',
       toggleOption14: 'ペットと合算する',
+      toggleOption15: '配信モード (名前をぼかす)',
       maxCombatantsTitle: '最大表示数',
       zoomTitle: 'Zoom Scale',
       zoomOption1: '80%',
