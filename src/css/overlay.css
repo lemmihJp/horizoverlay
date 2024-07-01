@@ -894,3 +894,33 @@
   color: black;
   filter: blur(0.4rem);
 }
+
+/*------------------*/
+.row.byJob.Pct .data-items.highlight:before {
+  background-image: linear-gradient(
+    to left,
+    rgba(125, 63, 134, 1) 0%,
+    rgba(125, 63, 134, 0.5) 51%,
+    rgba(125, 63, 134, 0.1) 51%,
+    rgba(125, 63, 134, 0.1) 100%
+  );
+  background-repeat: no-repeat;
+}
+.row.byJob.Pct .data-items:before {
+  background: rgba(125, 63, 134, 0.5);
+}
+
+.row.byJob.Vpr .data-items.highlight:before {
+  background-image: linear-gradient(
+    to left,
+    rgba(165, 166, 94, 1) 0%,
+    rgba(165, 166, 94, 0.5) 51%,
+    rgba(165, 166, 94, 0.1) 51%,
+    rgba(165, 166, 94, 0.1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.row.byJob.Vpr .data-items:before {
+  background: rgba(165, 166, 94, 0.5);
+}

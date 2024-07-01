@@ -161,6 +161,8 @@ export const jobRoles = {
     'thm',
     'dnc',
     'rpr',
+    'vpr',
+    'pct',
     'carbuncle',
     'garuda',
     'ifrit',
